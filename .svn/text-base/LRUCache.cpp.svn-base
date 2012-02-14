@@ -1,0 +1,13 @@
+#include "LRUCache.hpp"
+#include <string>
+
+bool LRUCache::
+put(std::string key, std::string value) {
+	lru_manager.push_back(key);
+	data[key] = value;
+}
+
+std::string LRUCache::
+get(std::string key) {
+	return data[key];
+}
